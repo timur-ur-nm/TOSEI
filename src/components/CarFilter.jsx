@@ -1,6 +1,9 @@
 import Checkbox from "../components/UI/CheckBox";
 import Radio from "../components/UI/Radio";
 
+// ЗАДАЧА
+// сделать фильтрацию по остльным видом и декомпозировать этот элемент 
+
 export default function CarFilter({
   filter,
   setFilter,
@@ -29,7 +32,9 @@ export default function CarFilter({
           <label className="flex flex-col text-sm">
             Марка:
             <select className="border rounded p-1 text-sm">
-              <option value="">Все</option>
+              <option value="all">Все</option>
+              
+              
             </select>
           </label>
 
