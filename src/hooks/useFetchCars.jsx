@@ -23,7 +23,7 @@ export function useFetchCars(url) {
         const response = await axios.get(url, { signal: controller.signal });
         
         // УСТАНАВЛИВАЕМ СОСТОЯНИЕ ДЛЯ СПИСКА КОТОРЫЙ ВОЗВРАЩАЕТ НАМ СЕРВЕР
-        setCars(response.data.cars.slice(0, 100));
+        setCars(response.data.cars);
         // setCars(response.data.cars);
       } catch (error) {
         // ОТЛАВЛИВАЕМ ОШИБКИ

@@ -4,7 +4,7 @@ export default function Checkbox({ onChange, checked, children }) {
       <input
         type="checkbox"
         checked={checked} // Control the checked state with the state variable
-        onChange={onChange} // Update the state when the checkbox changes
+        onChange={e => onChange(e.target.checked)} // Update the state when the checkbox changes
         className="w-4 h-4 text-blue-600 border-gray-300 rounded"
       />
       {children}
