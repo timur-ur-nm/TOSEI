@@ -1,4 +1,6 @@
-export default function CarItem({ car, img, compact }) {
+import React from "react";
+
+function CarItem({ car, img, compact }) {
   return (
     <div
       className={`flex items-center gap-4 p-2 border rounded w-full ${
@@ -23,3 +25,4 @@ export default function CarItem({ car, img, compact }) {
     </div>
   );
 }
+export default React.memo(CarItem);

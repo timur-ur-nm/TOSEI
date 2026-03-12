@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import { fetchCars } from "../api/fetchCars";
 
 // ЭТОТ ХУК СОЗДАН ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ С СЕРВЕРА
 // ОН ВОЗВРАЩАЕТ ОБЪЕКТ:
@@ -16,14 +16,12 @@ export function useFetchCars(url) {
   useEffect(() => {
     const controller = new AbortController();
 
-    const loadCars = async () => {
-      // await new Promise((resolve) => setTimeout(resolve, 10000)); // задержка 1 секунда
+    async function loadCars() {
       try {
-        // AXIOS GET ЗАПРОС НА СЕРВЕР ЧЕРЕЗ URL
-        const response = await axios.get(url, { signal: controller.signal });
-        
+        const cars = await fetchCars(url, controller.signal);
+
         // УСТАНАВЛИВАЕМ СОСТОЯНИЕ ДЛЯ СПИСКА КОТОРЫЙ ВОЗВРАЩАЕТ НАМ СЕРВЕР
-        setCars(response.data.cars);
+        setCars(cars);
         // setCars(response.data.cars);
       } catch (error) {
         // ОТЛАВЛИВАЕМ ОШИБКИ
@@ -34,7 +32,7 @@ export function useFetchCars(url) {
         // УСТАНАВЛИВАЕМ СОСТОЯНИЕ ЗАГРУЗКИ
         setLoading(false);
       }
-    };
+    }
 
     loadCars();
 

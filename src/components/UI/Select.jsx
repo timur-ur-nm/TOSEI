@@ -11,7 +11,7 @@ export default function MySelect({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border-1 p-2 border-gray-300 rounded-md"
+        className="w-full border-1 p-2 border-gray-300 bg-[#F1F1F1] rounded font-medium"
       >
         <option value="">
           {defaultValue}

@@ -10,6 +10,8 @@ export default function useCarFilterOptions(cars, filter) {
       }));
   }, [cars]);
 
+  
+
   const carModelsByName = useMemo(() => {
     return [
       ...new Set(
@@ -37,12 +39,14 @@ export default function useCarFilterOptions(cars, filter) {
           .map((car) => car.car_color),
       ),
     ]
-      .slice(0, 10)
+      .slice(0, 10) 
       .map((color) => ({
         name: color,
         value: color,
       }));
   }, [cars, filter.car , filter.car_model]);
 
+
+  
   return { carName, carModelsByName, carColorByNameAndModel };
 }
