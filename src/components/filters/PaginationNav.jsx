@@ -36,27 +36,51 @@ export default function Pagination({
   const pages = getPages();
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-6 flex-wrap">
+    <div className="flex items-center justify-center gap-1 sm:gap-2 mt-6 flex-wrap">
       <button
         onClick={prevPage}
         disabled={page === 1}
-        className="px-4 py-2 border rounded-lg hover:bg-gray-100 disabled:opacity-40"
+        className="
+        px-3 sm:px-4 py-2
+        text-sm
+        border border-gray-300
+        rounded-lg
+        bg-white
+        hover:bg-gray-100
+        transition
+        disabled:opacity-40
+        disabled:cursor-not-allowed
+      "
       >
         Prev
       </button>
 
       {pages.map((p, index) =>
         p === "start-dots" || p === "end-dots" ? (
-          <span key={p + index} className="px-2">
+          <span
+            key={p + index}
+            className="px-2 text-gray-500 text-sm sm:text-base"
+          >
             ...
           </span>
         ) : (
           <button
             key={p}
             onClick={() => goToPage(p)}
-            className={`px-4 py-2 border rounded-lg ${
-              page === p ? "bg-black text-white" : "hover:bg-gray-100"
-            }`}
+            className={`
+            min-w-[36px]
+            px-3 sm:px-4
+            py-2
+            text-sm
+            border
+            rounded-lg
+            transition
+            ${
+              page === p
+                ? "bg-[#CD0000] text-white  shadow"
+                : "bg-white border-gray-300 hover:bg-gray-100"
+            }
+          `}
           >
             {p}
           </button>
@@ -66,7 +90,17 @@ export default function Pagination({
       <button
         onClick={nextPage}
         disabled={page === totalPages}
-        className="px-4 py-2 border rounded-lg hover:bg-gray-100 disabled:opacity-40"
+        className="
+        px-3 sm:px-4 py-2
+        text-sm
+        border border-gray-300
+        rounded-lg
+        bg-white
+        hover:bg-gray-100
+        transition
+        disabled:opacity-40
+        disabled:cursor-not-allowed
+      "
       >
         Next
       </button>

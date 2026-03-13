@@ -52,13 +52,3 @@ export const router = createBrowserRouter([
   },
 ]);
 
-// export const routes = [
-//   { path: "/", element: Home, name: "Главная" },
-//   { path: "/services", element: Services, name: "Услуги" },
-//   { path: "/catalog", element: Catalog , name: "Каталог техники" },
-//   { path: "/auctions", element: Auctions , name: "Аукционы" },
-//   { path: "/information", element: Information , name: "Информация" },
-//   { path: "/about", element: About, name: "О нас" },
-//   { path: "/reviews", element: Reviews , name: "Отзывы" },
-//   { path: "/contacts", element: Contacts , name: "Контакты" },
-// ];

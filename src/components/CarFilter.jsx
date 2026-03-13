@@ -21,16 +21,16 @@ export default function CarFilter({ cars }) {
   };
 
   return (
-    <div className="flex flex-col gap-9">
-      <div className="flex flex-col gap-2 p-6 border rounded bg-white w-full">
-        {/* Первая строка: Checkbox */}
+    <div className="flex flex-col gap-6 sm:gap-9">
+      <div className="flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 shadow-xl rounded-lg bg-white w-full">
+        {/* Checkbox */}
         <div className="flex items-center gap-2">
           <Checkbox
             checked={filter.availability}
-            onChange={(cheked) =>
+            onChange={(checked) =>
               setFilter((prev) => ({
                 ...prev,
-                availability: cheked,
+                availability: checked,
               }))
             }
           >
@@ -38,27 +38,34 @@ export default function CarFilter({ cars }) {
           </Checkbox>
         </div>
 
-        {/* Вторая строка: Селекты */}
-        <CarSelectFilters
-          filter={filter}
-          setFilter={setFilter}
-          carName={carName}
-          carModelsByName={carModelsByName}
-          carColorByNameAndModel={carColorByNameAndModel}
-        />
+        {/* Select filters */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <CarSelectFilters
+            filter={filter}
+            setFilter={setFilter}
+            carName={carName}
+            carModelsByName={carModelsByName}
+            carColorByNameAndModel={carColorByNameAndModel}
+          />
+        </div>
 
-        {/* Третья строка: год, цена, VIN */}
-        <CarInputFilters filter={filter} setFilter={setFilter} />
+        {/* Inputs */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <CarInputFilters filter={filter} setFilter={setFilter} />
+        </div>
 
-        <div className="w-full flex justify-between items-center">
+        {/* Bottom row */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:justify-between sm:items-center">
           <button
-            className="w-fit py-2 px-4 border-1 rounded bg-[#CD0000] text-white"
+            className="w-full sm:w-fit py-2 px-4 rounded bg-[#CD0000] text-white hover:bg-red-700 transition"
             onClick={resetFilter}
           >
             Очистить
           </button>
 
-          <span>Автомобилей в наличии: {cars.length}</span>
+          <span className="text-sm text-gray-600 text-center sm:text-right">
+            Автомобилей в наличии: {cars.length}
+          </span>
         </div>
       </div>
 

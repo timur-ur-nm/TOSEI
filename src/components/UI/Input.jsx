@@ -11,11 +11,12 @@ export default function Input({
   const inputId = id || label;
 
   return (
-    <label
-      htmlFor={inputId}
-      className="flex flex-col"
-    >
-      {label && <span className="text-gray-600">{label}</span>}
+    <label htmlFor={inputId} className="flex flex-col gap-1 w-full">
+      {label && (
+        <span className="text-xs sm:text-sm text-gray-600">
+          {label}
+        </span>
+      )}
 
       <input
         id={inputId}
@@ -23,9 +24,19 @@ export default function Input({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`border rounded px-2 py-1 text-sm outline-none
-        focus:border-blue-500 focus:ring-1 focus:ring-blue-400
-        transition ${className}`}
+        className={`
+          w-full
+          border border-gray-300
+          rounded-md
+          px-3
+          py-2
+          text-sm
+          bg-white
+          outline-none
+         
+          transition
+          ${className}
+        `}
         {...props}
       />
     </label>

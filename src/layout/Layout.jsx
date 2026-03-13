@@ -1,14 +1,17 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Aside from "./Aside";
 import Header from "./Header";
 
 export default function Layout() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen">
       <Aside />
-      <main className="w-full flex flex-col">
+
+      <main className="flex-1 flex flex-col overflow-auto">
         <Header />
-        <Outlet />
+        <div className="flex-1">
+          <Outlet />
+        </div>
       </main>
     </div>
   );
