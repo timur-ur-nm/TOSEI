@@ -3,7 +3,7 @@ import { useState, createContext, useMemo } from "react";
 export const FilterStateContext = createContext(null);
 export const FilterActionsContext = createContext(null);
 
-const initialFilter = Object.freeze({
+const initialFilter = {
   availability: false,
   car: "",
   car_model: "",
@@ -11,7 +11,7 @@ const initialFilter = Object.freeze({
   car_model_year: null,
   price: null,
   car_vin: "",
-});
+};
 
 export default function FilterProvider({ children }) {
   const [selectedRadioSortMethod, setSelectedRadioSortMethod] = useState("");

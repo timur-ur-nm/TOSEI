@@ -42,10 +42,13 @@ export default function CarInputFilters({ filter, setFilter }) {
       [name]: value,
     }));
   };
+  
+  useEffect(() => {
+    setLocalFilter(filter);
+  }, [filter]);
 
   return (
     <div className="flex flex-wrap gap-3">
-      
       {inputs.map((input) => (
         <Input
           key={input.name}
@@ -59,9 +62,3 @@ export default function CarInputFilters({ filter, setFilter }) {
     </div>
   );
 }
-
-
-
-
-
-
