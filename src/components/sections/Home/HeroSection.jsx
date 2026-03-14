@@ -1,17 +1,17 @@
 import React from "react";
-import CarFilter from "../../components/CarFilter";
-import CarList from "../../components/CarList";
-import background from "../../assets/hero.png";
+import CarFilter from "../../CarFilter";
+import CarList from "../../CarList";
+import background from "../../../assets/hero.png";
 
-export default function HomeHeroSection({ rawCars }) {
+export default function HeroSection({ rawCars }) {
   return (
     <div className="relative flex flex-col items-center gap-5">
       {/* hero */}
-      <div className="relative w-full h-[420px]">
+      <div className="relative w-full h-full">
         <img
           src={background}
           alt="hero"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-[420px] object-cover z-0"
         />
 
         <h1 className="relative z-10 font-bold text-3xl sm:text-5xl mt-24 text-white text-center max-w-2xl mx-auto px-4">

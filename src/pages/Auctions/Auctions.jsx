@@ -1,7 +1,13 @@
-import React from 'react'
+
+
+import React from "react";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import { navigation } from "../../routes/navigation";
 
 export default function Auctions() {
   return (
-    <div>Auctions</div>
-  )
+    <div>
+      <Breadcrumbs routes={navigation} />
+    </div>
+  );
 }
