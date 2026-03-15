@@ -18,7 +18,7 @@ export default function HeroSection({ rawCars }) {
           Доставим любую технику из Японии за 3 недели
         </h1>
 
-        <div className="p-4 sm:p-6 w-full z-50 relative mt-10">
+        <div className="p-4 sm:p-6 w-full z-10 relative mt-10">
           <CarFilter cars={rawCars} />
           <CarList />
         </div>

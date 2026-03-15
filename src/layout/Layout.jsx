@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Aside from "./Aside";
 import Header from "./Header";
-
+import Footer from "./Footer";
 export default function Layout() {
   return (
     <div className="flex h-screen">
@@ -12,6 +12,7 @@ export default function Layout() {
         <div className="flex-1">
           <Outlet />
         </div>
+        <Footer />
       </main>
     </div>
   );

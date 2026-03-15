@@ -6,7 +6,7 @@ import HeroSection from "../../components/sections/Home/HeroSection";
 import AdvantageSection from "../../components/sections/Home/AdvantageSection";
 import ReviewsSection from "../../components/sections/Home/ReviewsSection";
 import HowToBuy from "../../components/sections/Home/HowToBuy";
-
+import ContactSection from '../../components/sections/Home/ContactSection'
 export default function Home() {
   // Загрузка данных с сервера через кастомный хук useCars
   const { rawCars } = useCars();
@@ -17,6 +17,7 @@ export default function Home() {
       <AdvantageSection />
       <ReviewsSection />
       <HowToBuy />
+      <ContactSection />
     </div>
   );
 }
