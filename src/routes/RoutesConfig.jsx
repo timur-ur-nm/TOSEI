@@ -6,8 +6,10 @@ import Reviews from "../pages/Reviews/Reviews";
 import Auctions from "../pages/Auctions/Auctions";
 import Information from "../pages/Information/Information";
 import Catalog from "../pages/Catalog/Catalog";
+import CarPage from "../pages/CarPage/CarPage";
 import Services from "../pages/Services/Services";
 import Layout from "../layout/Layout";
+
 import NotFound404 from "../pages/NotFound404";
 
 export const router = createBrowserRouter([
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "catalog",
         element: <Catalog />,
+      },
+      {
+        path: '/catalog/:id',
+        element: <CarPage />
       },
       {
         path: "auctions",
@@ -51,4 +57,3 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
-
