@@ -4,7 +4,7 @@ function Breadcrumbs({ routes }) {
   const location = useLocation();
   const paths = routes.filter((r) => location.pathname.startsWith(r.path));
   return (
-    <nav className="breadcrumb">
+    <nav className="breadcrumb mt-10 mb-5 text-[#8B8B8B]">
       {" "}
       {paths.map((r, i) => (
         <span key={i}>

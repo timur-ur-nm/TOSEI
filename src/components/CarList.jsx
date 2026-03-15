@@ -9,7 +9,7 @@ import useFilterContext from "../hooks/useFilterContext";
 import image from "../assets/not-image.png";
 import CarItem from "../components/UI/CarItem";
 import PaginationNav from "../components/filters/PaginationNav";
-
+import SortOptions from "./filters/SortOptions";
 // UTLS
 import Loader from "../utils/Loader";
 import StaggerContainer from "../components/animations/StaggerContainer";
@@ -32,6 +32,7 @@ export default function CarList() {
 
   return (
     <div>
+      <SortOptions />
       {/* Список автомобилей */}
       <StaggerContainer className="flex flex-col gap-2 mt-2">
         {loading ? (

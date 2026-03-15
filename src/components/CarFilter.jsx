@@ -69,7 +69,7 @@ export default function CarFilter({ cars }) {
         </div>
       </div>
 
-      <SortOptions />
+      
     </div>
   );
 }
