@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import AvailabilitySpan from './AvailabilitySpan'
+import AvailabilitySpan from "./AvailabilitySpan";
 function CarItem({ car, img }) {
   return (
     <Link to={`/catalog/${car.id}`}>
@@ -55,7 +55,8 @@ function CarItem({ car, img }) {
 
           <span className="text-2xl font-bold">{car.price} ₽</span>
 
-          <AvailabilitySpan car={car.avaiability} />
+          <AvailabilitySpan availability={car.availability} />
+          
         </div>
       </div>
     </Link>

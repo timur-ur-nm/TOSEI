@@ -50,14 +50,16 @@ export default function CarInputFilters({ filter, setFilter }) {
   return (
     <div className="flex flex-wrap gap-3">
       {inputs.map((input) => (
+        
         <Input
-          key={input.name}
-          label={input.label}
-          type={input.type}
-          placeholder={input.placeholder}
-          value={localFilter[input.name] ?? ""}
-          onChange={(e) => handleChange(input.name, e.target.value)}
-        />
+            key={input.name}
+            label={input.label}
+            type={input.type}
+            placeholder={input.placeholder}
+            value={localFilter[input.name] ?? ""}
+            onChange={(e) => handleChange(input.name, e.target.value)}
+          />  
+        
       ))}
     </div>
   );

@@ -60,7 +60,7 @@ export default function CarFilter({ cars }) {
             className="w-full sm:w-fit py-2 px-4 rounded bg-[#CD0000] text-white hover:bg-red-700 transition"
             onClick={resetFilter}
           >
-            Очистить
+            Очистить все 
           </button>
 
           <span className="text-sm text-gray-600 text-center sm:text-right">
