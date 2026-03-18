@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
 import AvailabilitySpan from "./AvailabilitySpan";
-function CarItem({ car, img }) {
+import image from "../../assets/not-image.png";
+function CarItem({ car }) {
   return (
     <Link to={`/catalog/${car.id}`}>
       <div
@@ -18,7 +19,7 @@ function CarItem({ car, img }) {
       "
       >
         <img
-          src={img}
+          src={image}
           alt={car.car_model}
           className="
           w-full

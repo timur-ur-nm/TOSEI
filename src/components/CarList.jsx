@@ -6,7 +6,7 @@ import usePagination from "../hooks/usePagination";
 import useFilterContext from "../hooks/useFilterContext";
 
 // UI
-import image from "../assets/not-image.png";
+
 import CarItem from "../components/UI/CarItem";
 import PaginationNav from "../components/filters/PaginationNav";
 import SortOptions from "./filters/SortOptions";
@@ -14,6 +14,7 @@ import SortOptions from "./filters/SortOptions";
 import Loader from "../utils/Loader";
 import StaggerContainer from "../components/animations/StaggerContainer";
 import SlideUp from "../components/animations/SlideUp";
+
 export default function CarList() {
   const { filter, selectedRadioSortMethod } = useFilterContext();
 
@@ -40,7 +41,7 @@ export default function CarList() {
         ) : paginatedData.length > 0 ? (
           paginatedData.map((car) => (
             <SlideUp key={car.id}>
-              <CarItem car={car} img={image} compact />
+              <CarItem car={car}  compact />
             </SlideUp>
           ))
         ) : (

@@ -1,4 +1,4 @@
-import { useSortedCar } from "./usesSortedCar";
+import { useSortedCar } from "./useSortedCar";
 import { useFetchCars } from "../hooks/useFetchCars";
 import useFilterCar from "./useFilterCar";
 
@@ -6,7 +6,7 @@ export function useCars({ sortMethod = "", filter = {} } = {}) {
   const { cars, loading, error } = useFetchCars(
     "https://myfakeapi.com/api/cars/",
   );
-  
+
   const rawCars = cars;
 
   const filteredCars = useFilterCar(cars, filter);
