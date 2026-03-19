@@ -1,16 +1,152 @@
-# React + Vite
+# 🚗 Car Marketplace React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Описание
 
-Currently, two official plugins are available:
+Веб-приложение для просмотра, фильтрации и покупки автомобилей с аукционов (Япония, США, Корея и др.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект реализован на React с использованием современного подхода:
 
-## React Compiler
+* компонентная архитектура
+* кастомные хуки
+* контекст для управления состоянием
+* адаптивная верстка
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Основной функционал
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📂 Каталог автомобилей
+
+* Просмотр списка автомобилей
+* Пагинация
+* Сортировка
+* Фильтрация (год, цена, VIN и т.д.)
+
+### 🔍 Страница автомобиля
+
+* Детальная информация
+* Галерея (карусель)
+* Характеристики и дополнительная информация (Tabs)
+* Статус наличия
+
+### ⭐ Рекомендованные авто
+
+* Вывод похожих автомобилей
+* Ограничение количества
+
+### 🧭 Навигация
+
+* React Router
+* Breadcrumbs
+
+### 💬 Отзывы
+
+* Таб с отзывами
+* Анимация появления (stagger)
+
+---
+
+## 🛠️ Технологии
+
+* React
+* React Router
+* Tailwind CSS
+* Framer Motion (анимации)
+* Embla Carousel
+
+---
+
+## 📁 Структура проекта
+
+```
+src/
+ ├── components/
+ │   ├── UI/
+ │   ├── filters/
+ │   ├── animations/
+ │   └── Breadcrumbs/
+ │
+ ├── pages/
+ │   ├── Catalog/
+ │   ├── CarPage/
+ │   ├── Reviews/
+ │   └── Information/
+ │
+ ├── hooks/
+ │   ├── useCars.js
+ │   ├── usePagination.js
+ │   └── useRecommendedCars.js
+ │
+ ├── context/
+ │   └── FilterContext
+ │
+ ├── routes/
+ │   └── navigation.js
+ │
+ └── assets/
+```
+
+---
+
+## ⚙️ Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск проекта
+npm run dev
+```
+
+---
+
+## 📱 Адаптивность
+
+Приложение полностью адаптивно:
+
+* mobile-first подход
+* grid + flex layout
+* responsive typography
+
+---
+
+## 🧠 Архитектура
+
+### 🔹 Компоненты
+
+* переиспользуемые (UI)
+* разделены по ответственности
+
+### 🔹 Хуки
+
+* логика вынесена из компонентов
+* переиспользуемость
+
+### 🔹 Контекст
+
+* управление фильтрами
+
+---
+
+## ✨ Особенности
+
+* Анимации появления элементов (stagger)
+* Чистая архитектура
+* Масштабируемая структура
+* Разделение логики и UI
+
+---
+
+## 📌 Возможные улучшения
+
+* Добавить авторизацию
+* Подключить реальный API
+* Добавить избранное
+* Lazy loading
+* SEO оптимизация
+
+---
+
+## 👨‍💻 Автор
+
+Разработано в учебных целях для практики React и frontend-разработки.
