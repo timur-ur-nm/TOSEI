@@ -1,11 +1,7 @@
-import React from "react";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import { navigation } from "../../routes/navigation";
+import React from 'react'
 
 export default function About() {
   return (
-    <div>
-      <Breadcrumbs routes={navigation} />
-    </div>
-  );
+    <div>About</div>
+  )
 }

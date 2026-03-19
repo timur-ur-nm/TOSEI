@@ -23,7 +23,6 @@ export default function CarList() {
     filter,
   });
 
-  // ПАГИНАЦИЯ
   const { paginatedData, page, totalPages, nextPage, prevPage, goToPage } =
     usePagination(cars, 10);
 
@@ -31,25 +30,40 @@ export default function CarList() {
     goToPage(1);
   }, [filter, selectedRadioSortMethod]);
 
+  // ✅ 1. Loader
+  if (loading) {
+    return (
+      <div className="flex justify-center py-20">
+        <Loader />
+      </div>
+    );
+  }
+
+  // ✅ 2. Нет машин
+  if (!paginatedData.length) {
+    return (
+      <div>
+        <SortOptions />
+        <div className="h-[50vh] flex justify-center items-center">
+          <p>Машин нет</p>
+        </div>
+      </div>
+    );
+  }
+
+  // ✅ 3. Есть машины
   return (
     <div>
       <SortOptions />
-      {/* Список автомобилей */}
+
       <StaggerContainer className="flex flex-col gap-2 mt-2">
-        {loading ? (
-          <Loader />
-        ) : paginatedData.length > 0 ? (
-          paginatedData.map((car) => (
-            <SlideUp key={car.id}>
-              <CarItem car={car}  compact />
-            </SlideUp>
-          ))
-        ) : (
-          <div className="h-dvh flex justify-center">
-            <p>Машин нет</p>
-          </div>
-        )}
+        {paginatedData.map((car) => (
+          <SlideUp key={car.id}>
+            <CarItem car={car} compact />
+          </SlideUp>
+        ))}
       </StaggerContainer>
+
       <PaginationNav
         page={page}
         prevPage={prevPage}

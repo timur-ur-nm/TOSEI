@@ -1,6 +1,7 @@
 import React from "react";
-import ScaleIn from "../../animations/ScaleIn";
-import FadeIn from '../../animations/FadeIn'
+import ScaleIn from "../animations/ScaleIn";
+import FadeIn from "../animations/FadeIn";
+import image from "../../assets/review1.png";
 const reviews = [
   {
     id: 1,
@@ -41,6 +42,7 @@ export default function ReviewsSection() {
                 key={review.id}
                 className="bg-white rounded-xl shadow-sm hover:shadow-md transition p-6 flex flex-col gap-3"
               >
+                <img src={image} alt="" />
                 {/* рейтинг */}
                 <div className="text-yellow-400 text-lg">
                   {"★".repeat(review.rating)}

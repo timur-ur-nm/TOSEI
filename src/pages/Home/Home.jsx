@@ -4,9 +4,9 @@ import { useCars } from "../../hooks/useCars";
 // UI
 import HeroSection from "../../components/sections/Home/HeroSection";
 import AdvantageSection from "../../components/sections/Home/AdvantageSection";
-import ReviewsSection from "../../components/sections/Home/ReviewsSection";
+import ReviewsSection from "../../components/UI/ReviewsSection";
 import HowToBuy from "../../components/sections/Home/HowToBuy";
-import ContactSection from '../../components/sections/Home/ContactSection'
+import ContactSection from '../../components/UI/ContactSection'
 export default function Home() {
   // Загрузка данных с сервера через кастомный хук useCars
   const { rawCars } = useCars();

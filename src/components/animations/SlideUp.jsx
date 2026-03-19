@@ -14,7 +14,7 @@ export default function SlideUp({
       transition={{
         duration,
         delay,
-        ease: "easeOut",
+        ease: "linear",
       }}
       viewport={{
         once: false,

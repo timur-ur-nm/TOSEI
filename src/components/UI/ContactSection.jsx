@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import phoneIcon from "../../../assets/phone-line.png";
-import whatsappIcon from "../../../assets/whatsapp.png";
-import emailIcon from "../../../assets/mail-line.png";
+import { useState } from "react";
+import phoneIcon from "../../assets/phone-line.png";
+import whatsappIcon from "../../assets/whatsapp.png";
+import emailIcon from "../../assets/mail-line.png";
 
 export default function ContactSection() {
   const [form, setForm] = useState({

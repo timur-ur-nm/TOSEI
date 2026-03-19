@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden md:flex min-h-16 bg-[#F7F7F9] px-6 justify-between items-center">
+      <div className="hidden md:flex min-h-16 :bg-[#F7F7F9] px-6 justify-between items-center">
         <p className="text-sm max-w-3xs leading-snug">
           Автомобили из Японии с доставкой по всей России
         </p>
@@ -24,7 +24,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Header */}
-      <div className="flex md:hidden min-h-14 bg-[#F7F7F9] px-4 justify-between items-center">
+      <div className="flex md:hidden min-h-14 shadow-[#E4E4E7] px-4 justify-between items-center">
         <Link to="/">
           <img src={logo} alt="Logo" className="w-28 h-auto shrink-0" />
         </Link>
