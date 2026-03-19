@@ -7,6 +7,7 @@ export default function TabSection({ car,  extra, specs }) {
     {
       key: "specs",
       label: "Характеристики",
+      
       content: (
         <div className="grid gap-3">
           {specs.map((spec, index) => (
