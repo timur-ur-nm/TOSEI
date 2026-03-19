@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Tab from "../../UI/Tab";
 
-export default function TabSection({ car,  extra, specs }) {
+export default function TabSection({ car, extra, specs }) {
   const [activeTab, setActiveTab] = useState("specs");
+
   const tabs = [
     {
       key: "specs",
       label: "Характеристики",
-      
       content: (
         <div className="grid gap-3">
           {specs.map((spec, index) => (
@@ -36,13 +36,13 @@ export default function TabSection({ car,  extra, specs }) {
       ),
     },
   ];
+
   return (
-    <div className="flex ">
-      <Tab
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        tabs={tabs}
-      />
+    <div className="flex flex-col lg:flex-row gap-10">
+      {/* Левая часть (ТАБЫ) */}
+      <div className="w-full">
+        <Tab activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
+      </div>
 
       {/* Правая часть */}
       <div className="flex flex-col gap-4 p-6 w-full lg:w-[300px] lg:shrink-0 lg:sticky lg:top-6 h-fit">

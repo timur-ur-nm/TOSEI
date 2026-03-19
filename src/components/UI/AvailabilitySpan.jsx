@@ -1,7 +1,7 @@
 export default function AvailabilitySpan({ availability }) {
   return (
     <span
-      className={`inline-flex items-center px-3 py-1 text-xs rounded-full font-medium
+      className={`inline-flex items-center px-3 py-1 text-xs rounded-full font-medium w-fit
         ${
           availability
             ? "bg-green-500 text-white"
